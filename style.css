@@ -1,0 +1,14 @@
+#taskbar{
+	height: 30px;
+	width: 101%;
+	background: black;
+	margin: 0;
+	position: absolute;
+	bottom: 0;
+	right: 0px;
+	opacity: 0.9;
+}
+
+html{
+	background-image: url(Ressources/Images/foggy_montain.jpg);
+}
