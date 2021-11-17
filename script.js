@@ -18,8 +18,7 @@ function Time() {
 Time();
 setInterval(Time, 10000);
 
-//Onload Popup
-function Onload() {
-	popup = getElementById("onload_popup")
-	popup.style.display = "block"
-}
+popup = document.getElementById("onload_popup")
+
+function Onclick_exit() {
+	popup.style.display = "none"}
