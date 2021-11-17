@@ -1,5 +1,5 @@
 #taskbar{
-	height: 30px;
+	height: 40px;
 	width: 101%;
 	background: black;
 	margin: 0;
@@ -7,8 +7,53 @@
 	bottom: 0;
 	right: 0px;
 	opacity: 0.9;
+	display: grid;
 }
 
 html{
 	background-image: url(Ressources/Images/foggy_montain.jpg);
+	background-size: contain, no repeat;
+}
+
+#date{
+	position: absolute;
+	bottom: -15px;
+	right: 0px;
+	color: white;
+}
+
+#time{
+	position: absolute;
+	bottom: 2px;
+	right: 20px;
+	color: white
+}
+
+#onload_popup{
+	position: fixed;
+	height: 500px;
+	width: 300px;
+	background-color: white;
+	opacity: 1;
+	top: 5%;
+	left: 40%;
+	border-width: 1px;
+	border-color: black;
+	border: solid;
+}
+
+#exit{
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	margin: 0;
+	margin-left: 90%;
+	background-image: url(Ressources/Images/cross.png);
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#exit:hover {
+	background-color: red;
 }
