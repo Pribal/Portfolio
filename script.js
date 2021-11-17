@@ -16,7 +16,7 @@ function Time() {
 
 //Refresh Time
 Time();
-setInterval(Time, 10000);
+setInterval(Time, 1000);
 
 popup = document.getElementById("onload_popup")
 
