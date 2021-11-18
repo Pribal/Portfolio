@@ -18,7 +18,16 @@ function Time() {
 Time();
 setInterval(Time, 1000);
 
-popup = document.getElementById("onload_popup")
+popup = document.getElementById("onload_popup");
 
 function Onclick_exit() {
-	popup.style.display = "none"}
+	popup.style.display = "none";
+}
+
+function Center_popup(){
+	var lenght_taskbar = document.getElementById("taskbar").offsetWidth;
+	lenght_taskbar = lenght_taskbar/3;
+	popup.style.left = lenght_taskbar+"px";
+}
+
+Center_popup();
