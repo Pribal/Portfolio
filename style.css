@@ -7,10 +7,11 @@
 	bottom: 0;
 	right: 0px;
 	display: grid;
+	grid-row: 1;
+
 }
 
-html{
-	background-image: url(Ressources/Images/foggy_montain.jpg);
+#bg{
 	background-size: cover;
 }
 
@@ -26,6 +27,15 @@ html{
 	bottom: 2px;
 	right: 20px;
 	color: white;
+}
+
+#bg_button{
+	height: 40px;
+	width: 20px;
+	background-color: red;
+	position: absolute;
+	bottom: 0;
+	right: 6%;
 }
 
 #onload_popup{
@@ -59,4 +69,5 @@ html{
 #font_popup{
 	font-size:small;
 	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
 }

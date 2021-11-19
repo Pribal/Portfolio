@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="bg">
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -7,15 +7,20 @@
 </head>
 <body>
 	<canvas id=taskbar>GfG</canvas>
+	<canvas id="bg_button" onclick="change_background()"></canvas>
 	<p id="time"></p>
 	<p id="date"></p>
 
 	<div id="onload_popup">
 		<canvas style="background-color: dimgrey; height: 30px; width: 370px; position: fixed;"></canvas>
 		<canvas id="exit" onclick="Onclick_exit()"></canvas>
-		<h4 style="text-align: center; font-family: 'Times New Roman', Times, serif;"><u>Bienvenue sur mon portfolio</u></h4>
-		<p id="font_popup" style="text-align: center">Ce portfolio est sous la forme d'un système d'exploitation.</p>
-
+		<h3 style="text-align: center; font-family: 'Times New Roman', Times, serif;"><u>Bienvenue sur mon portfolio</u></h3>
+		<p id="font_popup">Ce portfolio est sous la forme d'un système d'exploitation.</p>
+		<p id="font_popup">Ici, vous retrouverez différentes applications pour en apprendre plus sur moi.
+			 Cliquez simplement sur les icones des applications pour les ouvrir.</p>
+		<video width="320" height="220">
+		</video>
+		<p id="font_popup">Bonne découverte et bonne balade!</p>
 	</div>
 
 
