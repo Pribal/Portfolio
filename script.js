@@ -61,3 +61,10 @@ function change_background(){
 }
 
 change_background();
+
+//Grid auto row and columns
+function auto_columns(){
+	background.style.gridTemplateColumns = repeat(3, );
+	
+
+}
