@@ -6,15 +6,18 @@
 	position: absolute;
 	bottom: 0;
 	right: 0px;
-	display: grid;
-	grid-row: 1;
 
 }
 
-#bg{
+.bg{
 	background-size: cover;
 	display: grid;
+	grid-template-rows: repeat(5, auto);
+	grid-template-columns: repeat(8, auto);
+	align-content: center;
+	
 }
+
 
 #date{
 	position: absolute;
@@ -43,7 +46,7 @@
 }
 
 #onload_popup{
-	position: fixed;
+	position: absolute;
 	height: 70%;
 	width: 400px;
 	background-color: white;
@@ -51,6 +54,13 @@
 	border-width: 1px;
 	border-color: black;
 	border: solid;
+}
+
+#header{
+	background-color: dimgrey; 
+	height: 30px; 
+	width: 370px; 
+	position: absolute;
 }
 
 #exit{
@@ -85,4 +95,20 @@
 	border-width: 1px;
 	border-color: black;
 	border: solid;
+	display: none;
+}
+
+.icon_presentation{
+	background-color: red;
+	grid-row: 1;
+	grid-column: 1;
+	justify-items: center;
+	align-items: center;
+}
+
+#icon_contact{
+	background-color: green;
+	grid-row: 5;
+	grid-column: 1;
+	justify-items: center;
 }

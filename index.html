@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="bg">
+<html class="bg">
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -11,8 +11,14 @@
 	<p id="time"></p>
 	<p id="date"></p>
 
+	<div class="icon_presentation" onclick="Open_window()">
+		<canvas style="background-color: red;">presentation</canvas>
+	</div>
+	<canvas id="icon_contact" onclick="Open_window()">contact</canvas>
+
+
 	<div id="onload_popup">
-		<canvas style="background-color: dimgrey; height: 30px; width: 370px; position: fixed;"></canvas>
+		<canvas style="background-color: dimgrey; height: 30px; width: 370px; position: absolute;"></canvas>
 		<canvas id="exit" onclick="Onclick_exit()"></canvas>
 		<h3 style="text-align: center; font-family: 'Times New Roman', Times, serif;"><u>Bienvenue sur mon portfolio</u></h3>
 		<p id="font_popup">Ce portfolio est sous la forme d'un système d'exploitation.</p>
@@ -22,6 +28,12 @@
 		</video>
 		<p id="font_popup">Bonne découverte et bonne balade!</p>
 	</div>
+
+	<div id="presentation">
+
+	</div>
+
+
 
 
 	
