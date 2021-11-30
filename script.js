@@ -1,3 +1,11 @@
+function Screen_size(){
+	W = window.screen.width;
+	H =  window.screen.height;
+	console.log("Width:" + W + "px");
+	console.log("Height:" + H + "px");
+}
+
+Screen_size();
 
 function Time() {
 	now =  new Date();
@@ -36,9 +44,8 @@ function Onclick_exit() {
 
 //Center Popup
 function Center_popup(){
-	var lenght_taskbar = document.getElementById("taskbar").offsetWidth;
-	lenght_taskbar = lenght_taskbar/3;
-	popup.style.left = lenght_taskbar+"px";
+	centre = W/3;
+	popup.style.left = centre+"px";
 }
 
 Center_popup();
@@ -108,6 +115,7 @@ function dragElement(elmnt) {
     // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+	
   }
 
   function closeDragElement() {
