@@ -35,15 +35,18 @@ function Time() {
 Time();
 setInterval(Time, 1000);
 
-popup = document.getElementById("onload_popup");
 
-//Close Popup tab
-function Onclick_exit() {
-	popup.style.display = "none";
+
+//Close tab
+function Onclick_exit(elem) {
+	i_d = document.getElementById(elem.parentNode.id);
+	console.log(i_d);
+	i_d.style.display = "none";
 }
 
 //Center Popup
 function Center_popup(){
+	popup = document.getElementById("onload_popup");
 	centre = W/3;
 	popup.style.left = centre+"px";
 }
@@ -63,13 +66,13 @@ function change_background(){
 	chemin = "";
 	background = document.getElementsByClassName("bg")[0];
 	chemin = "Ressources/Images/" + bg_list[i];
-	console.log(chemin);
 	return background.style.backgroundImage = "url("+chemin+")";
 }
 
 change_background();
 
 presentation = document.getElementById("presentation")
+console.log(presentation);
 
 function Open_window(){
 	if (presentation.style.display == "block"){
@@ -81,7 +84,7 @@ function Open_window(){
 }
 
 // Make the window draggable:
-dragElement(document.getElementById("onload_popup"));
+dragElement(document.getElementsByClassName("application"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;

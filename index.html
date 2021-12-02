@@ -12,25 +12,32 @@
 	<p id="date"></p>
 
 	<div class="icon_presentation" onclick="Open_window()">
-		<canvas style="background-color: red;">presentation</canvas>
+		<canvas style="background-image: url(Ressources/Images/tkt_file.png);background-repeat: no-repeat; background-position: center; height: 90px; width: 90px; background-size: 60%; position: absolute; margin-bottom: 10px;"></canvas>
+		<p style="font: 10px Segoe UI; font-weight: bold; margin-top: 80%; text-align: center;color: white;">presentation.txt</p>
 	</div>
-	<canvas id="icon_contact" onclick="Open_window()">contact</canvas>
+	<div id="icon_contact" onclick="Open_window()">
+	</div>
 
 
-	<div id="onload_popup">
+	<div class="application" id="onload_popup">
 		<canvas id="header"></canvas>
-		<canvas id="exit" onclick="Onclick_exit()"></canvas>
+		<canvas id="exit" onclick="Onclick_exit(this)"></canvas>
 		<h3 style="text-align: center; font-family: 'Times New Roman', Times, serif;"><u>Bienvenue sur mon portfolio</u></h3>
-		<p id="font_popup">Ce portfolio est sous la forme d'un système d'exploitation.</p>
-		<p id="font_popup">Ici, vous retrouverez différentes applications pour en apprendre plus sur moi.
+		<p id="font">Ce portfolio est sous la forme d'un système d'exploitation.</p>
+		<p id="font">Ici, vous retrouverez différentes applications pour en apprendre plus sur moi.
 			 Cliquez simplement sur les icones des applications pour les ouvrir.</p>
 		<video width="320" height="220">
 		</video>
-		<p id="font_popup">Bonne découverte et bonne balade!</p>
+		<p id="font">Bonne découverte et bonne balade!</p>
 	</div>
 
-	<div id="presentation">
-
+	<div class="application" id="presentation">
+		<canvas id="header"></canvas>
+		<canvas id="exit" onclick="Onclick_exit(this)"></canvas>
+		<h3 style="text-align: center; font-family: 'Times New Roman', Times, serif;"><u>Présentation</u></h3>
+		<p id="font">Je m'appelle Oscar Giraudoux, j'ai 18 ans.</p>
+		<p id="font">Ici, vous retrouverez différentes applications pour en apprendre plus sur moi.
+			 Cliquez simplement sur les icones des applications pour les ouvrir.</p>
 	</div>
 
 
