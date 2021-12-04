@@ -82,13 +82,13 @@ function Open_window(){
 }
 
 function dragElement(elmnt) {
+  elmnt = document.getElementById(elmnt.parentNode.id);
+  console.log(elmnt);
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById("header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById("header").onmousedown = dragMouseDown;
+  if (document.querySelector(elmnt > "#header")) {
+	  document.querySelector(elmnt > "#header").onmousedown = dragMouseDown;
   } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
+      elmnt.onmousedown = dragMouseDown;
   }
 
   function dragMouseDown(e) {
