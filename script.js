@@ -40,7 +40,6 @@ setInterval(Time, 1000);
 //Close tab
 function Onclick_exit(elem) {
 	i_d = document.getElementById(elem.parentNode.id);
-	console.log(i_d);
 	i_d.style.display = "none";
 }
 
@@ -72,7 +71,6 @@ function change_background(){
 change_background();
 
 presentation = document.getElementById("presentation")
-console.log(presentation);
 
 function Open_window(){
 	if (presentation.style.display == "block"){
@@ -82,9 +80,6 @@ function Open_window(){
 	}
 	
 }
-
-// Make the window draggable:
-dragElement(document.getElementsByClassName("application"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
@@ -126,4 +121,5 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+  
 }
