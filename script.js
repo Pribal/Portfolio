@@ -4,8 +4,15 @@ function Screen_size(){
 	console.log("Width:" + W + "px");
 	console.log("Height:" + H + "px");
 }
-
 Screen_size();
+
+function Setgrid(){
+	g = document.getElementById("container");
+	g.style.height = H;
+	g.style.width = W;
+	g.style.top = 0 + "px";
+	g.style.left = 0 + "px";
+}
 
 function Time() {
 	now =  new Date();
@@ -81,15 +88,12 @@ function Open_window(){
 	
 }
 
+//Drag app
 function dragElement(elmnt) {
-  elmnt = document.getElementById(elmnt.parentNode.id);
+  elmntapp = document.getElementById(elmnt.parentNode.id);
   console.log(elmnt);
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.querySelector(elmnt > "#header")) {
-	  document.querySelector(elmnt > "#header").onmousedown = dragMouseDown;
-  } else {
-      elmnt.onmousedown = dragMouseDown;
-  }
+  elmnt.onmousedown = dragMouseDown;
 
   function dragMouseDown(e) {
     e = e || window.event;
@@ -111,9 +115,14 @@ function dragElement(elmnt) {
     pos3 = e.clientX;
     pos4 = e.clientY;
     // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-	
+    elmntapp.style.top = (elmntapp.offsetTop - pos2) + "px";
+    elmntapp.style.left = (elmntapp.offsetLeft - pos1) + "px";
+
+
+	console.log(elmntapp.style.top);
+	if (elmntapp.style.offsetTop > 140){
+		elmntapp.style.top = 140 + "px";
+	}
   }
 
   function closeDragElement() {

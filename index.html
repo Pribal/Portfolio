@@ -5,18 +5,20 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>Portefolio</title>
 </head>
-<body class="container">
+<body>
 	<canvas id=taskbar>GfG</canvas>
 	<canvas id="bg_button" onclick="change_background()"></canvas>
 	<p id="time"></p>
 	<p id="date"></p>
-
-	<div class="icon_presentation" onclick="Open_window()">
+	
+	<div id="container">
+		<div class="icon_presentation" onclick="Open_window()">
 		<canvas style="background-image: url(Ressources/Images/tkt_file.png);background-repeat: no-repeat; background-position: center; height: 90px; width: 90px; background-size: 60%; position: absolute; margin-bottom: 10px;"></canvas>
 		<p style="font: 10px Segoe UI; font-weight: bold; margin-top: 80%; text-align: center;color: white;">presentation.txt</p>
+		</div>
+		<div id="icon_contact" onclick="Open_window()"></div>
 	</div>
-	<div id="icon_contact" onclick="Open_window()">
-	</div>
+	
 
 
 	<div class="application" id="onload_popup">
