@@ -1,6 +1,6 @@
 function Screen_size(){
-	W = window.screen.width;
-	H =  window.screen.height;
+	W = window.innerWidth;
+	H =  window.innerHeight;
 	console.log("Width:" + W + "px");
 	console.log("Height:" + H + "px");
 }
@@ -88,7 +88,9 @@ function Open_window(){
 	
 }
 
-//Drag app
+taskbar = document.getElementById("taskbar");
+
+
 function dragElement(elmnt) {
   elmntapp = document.getElementById(elmnt.parentNode.id);
   console.log(elmnt);
@@ -118,10 +120,20 @@ function dragElement(elmnt) {
     elmntapp.style.top = (elmntapp.offsetTop - pos2) + "px";
     elmntapp.style.left = (elmntapp.offsetLeft - pos1) + "px";
 
-
-	console.log(elmntapp.style.top);
-	if (elmntapp.style.offsetTop > 140){
-		elmntapp.style.top = 140 + "px";
+	var pos = elmntapp.getBoundingClientRect();
+	console.log("Top:", pos.top);
+	console.log("Left:", pos.left);
+	if (pos.top + pos.height > H - 40){
+		elmntapp.style.top = H - 40 - 456 + "px";
+	}
+	if (pos.top < 0){
+		elmntapp.style.top = 0 + "px";
+	}
+	if (pos.left < 0){
+		elmntapp.style.left = 0 + "px";
+	}
+	if (pos.left > W - pos.width){
+		elmntapp.style.left = W - pos.width + "px";
 	}
   }
 
