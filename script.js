@@ -59,15 +59,36 @@ function Center_popup(){
 
 Center_popup();
 
+app = document.getElementsByClassName("application");
+console.log(app);
+function darkmode(){
+	for (var k = 0; k < app.length; k++) {
+		console.log(k);
+		console.log(app[k]);
+		app[k].style.backgroundColor = "#474747";
+	}
+}
+
+function lightmode(){
+	for (var k = 0; k < app.length; k++) {
+		console.log(k);
+		console.log(app[k]);
+		app[k].style.backgroundColor = "#ffffff";
+	}
+
+}
+
 //Change Background
-var bg_list = new Array("foggy_montain.jpg","river.jpg");
+var bg_list = new Array("rose_bleu.jpg","darkmode.jpg");
 i = 1;
 
 function change_background(){
 	if (i == 0){
 		i = 1;
+		darkmode();
 	}else if (i == 1){
 		i = 0;
+		lightmode();
 	}
 	chemin = "";
 	background = document.getElementsByClassName("bg")[0];
@@ -93,7 +114,7 @@ taskbar = document.getElementById("taskbar");
 
 function dragElement(elmnt) {
   elmntapp = document.getElementById(elmnt.parentNode.id);
-  console.log(elmnt);
+  console.log(elmntapp);
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   elmnt.onmousedown = dragMouseDown;
 
@@ -121,10 +142,9 @@ function dragElement(elmnt) {
     elmntapp.style.left = (elmntapp.offsetLeft - pos1) + "px";
 
 	var pos = elmntapp.getBoundingClientRect();
-	console.log("Top:", pos.top);
-	console.log("Left:", pos.left);
+
 	if (pos.top + pos.height > H - 40){
-		elmntapp.style.top = H - 40 - 456 + "px";
+		elmntapp.style.top = H - 40 - pos.height + "px";
 	}
 	if (pos.top < 0){
 		elmntapp.style.top = 0 + "px";
@@ -141,6 +161,7 @@ function dragElement(elmnt) {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
+	console.log(elmntapp);
   }
   
 }
