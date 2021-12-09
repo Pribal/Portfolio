@@ -60,22 +60,26 @@ function Center_popup(){
 Center_popup();
 
 app = document.getElementsByClassName("application");
-console.log(app);
 function darkmode(){
 	for (var k = 0; k < app.length; k++) {
-		console.log(k);
-		console.log(app[k]);
 		app[k].style.backgroundColor = "#474747";
+		text = app[k].querySelectorAll("p, h3");
+		for (var t = 0; t < text.length; t++){
+			console.log(text[t]);
+			text[t].style.color = "#ffffff";
+		}
 	}
 }
 
 function lightmode(){
 	for (var k = 0; k < app.length; k++) {
-		console.log(k);
-		console.log(app[k]);
 		app[k].style.backgroundColor = "#ffffff";
+		text = app[k].querySelectorAll("p, h3");
+		for (var t = 0; t < text.length; t++){
+			console.log(text[t]);
+			text[t].style.color = "#000000";
+		}
 	}
-
 }
 
 //Change Background
@@ -111,12 +115,12 @@ function Open_window(){
 
 taskbar = document.getElementById("taskbar");
 
-
 function dragElement(elmnt) {
-  elmntapp = document.getElementById(elmnt.parentNode.id);
+  var elmntapp = document.getElementById(elmnt.parentNode.id);
   console.log(elmntapp);
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  elmnt.onmousedown = dragMouseDown;
+  //elmnt.onmousedown = dragMouseDown;
+  elmnt.addEventListener("mousedown", dragMouseDown);
 
   function dragMouseDown(e) {
     e = e || window.event;
@@ -161,7 +165,6 @@ function dragElement(elmnt) {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
-	console.log(elmntapp);
   }
   
 }
