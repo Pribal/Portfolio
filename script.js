@@ -63,9 +63,8 @@ app = document.getElementsByClassName("application");
 function darkmode(){
 	for (var k = 0; k < app.length; k++) {
 		app[k].style.backgroundColor = "#474747";
-		text = app[k].querySelectorAll("p, h3");
+		text = app[k].querySelectorAll("p, h3, a");
 		for (var t = 0; t < text.length; t++){
-			console.log(text[t]);
 			text[t].style.color = "#ffffff";
 		}
 	}
@@ -74,9 +73,8 @@ function darkmode(){
 function lightmode(){
 	for (var k = 0; k < app.length; k++) {
 		app[k].style.backgroundColor = "#ffffff";
-		text = app[k].querySelectorAll("p, h3");
+		text = app[k].querySelectorAll("p, h3, a");
 		for (var t = 0; t < text.length; t++){
-			console.log(text[t]);
 			text[t].style.color = "#000000";
 		}
 	}
@@ -102,13 +100,14 @@ function change_background(){
 
 change_background();
 
-presentation = document.getElementById("presentation")
-
-function Open_window(){
-	if (presentation.style.display == "block"){
-		presentation.style.display = "none";
+function Open_window(opn){
+	var opnC = opn.className;
+	console.log(opnC);
+	var op = document.getElementById(opnC);
+	if (op.style.display == "block"){
+		op.style.display = "none";
 	}else{
-		presentation.style.display = "block";
+		op.style.display = "block";
 	}
 	
 }
@@ -117,7 +116,6 @@ taskbar = document.getElementById("taskbar");
 
 function dragElement(elmnt) {
   var elmntapp = document.getElementById(elmnt.parentNode.id);
-  console.log(elmntapp);
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   //elmnt.onmousedown = dragMouseDown;
   elmnt.addEventListener("mousedown", dragMouseDown);

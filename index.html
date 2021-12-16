@@ -12,11 +12,27 @@
 	<p id="date"></p>
 	
 	<div id="container">
-		<div class="icon_presentation" onclick="Open_window()">
-		<canvas style="background-image: url(Ressources/Images/tkt_file.png);background-repeat: no-repeat; background-position: center; height: 90px; width: 90px; background-size: 60%; position: absolute; margin-bottom: 10px;"></canvas>
-		<p style="font: 10px Segoe UI; font-weight: bold; margin-top: 80%; text-align: center;color: white;">presentation.txt</p>
+		<div class="presentation" onclick="Open_window(this)">
+		<canvas style="background-image: url(Ressources/Images/tkt_file.png);background-repeat: no-repeat; height: 90px; width: 90px; background-size: 60%; position: absolute; margin-top: 10px; margin-left: 17px;"></canvas>
+		<p style="font: 11px Segoe UI; font-weight: bold; margin-top: 75%; text-align: center;color: white; text-shadow: 1px 1px 0px black;">presentation.txt</p>
 		</div>
-		<div id="icon_contact" onclick="Open_window()"></div>
+
+		<div class="referentiel" onclick="Open_window(this)">
+		<canvas style="background-image: url(Ressources/Images/pdf_file.png);background-repeat: no-repeat; height: 90px; width: 90px; background-size: 60%; position: absolute; margin-top: 10px; margin-left: 17px;"></canvas>
+		<p style="font: 10px Segoe UI; font-weight: bold; margin-top: 80%; text-align: center;color: white; text-shadow: 1px 1px 0px black;">référentiel.pdf</p>
+		</div>
+
+		<div class="cv">
+		<a href="Ressources/Pdf/Référentiel BTS SIO.pdf" target="_blank" style="text-decoration: none;">
+		<canvas style="background-image: url(Ressources/Images/pdf_file.png);background-repeat: no-repeat; height: 90px; width: 90px; background-size: 60%; position: absolute; margin-top: 10px; margin-left: 17px;"></canvas>
+		<p style="font: 10px Segoe UI; font-weight: bold; margin-top: 80%; text-align: center;color: white; text-shadow: 1px 1px 0px black;">cv.pdf</p>
+		</a>
+		</div>
+
+		<div class="contact">
+		<canvas style="background-image: url(Ressources/Images/pdf_file.png);background-repeat: no-repeat; height: 90px; width: 90px; background-size: 60%; position: absolute; margin-top: 10px; margin-left: 17px;"></canvas>
+		<p style="font: 10px Segoe UI; font-weight: bold; margin-top: 80%; text-align: center;color: white; text-shadow: 1px 1px 0px black;">contact.txt</p>
+		</div>
 	</div>
 	
 
@@ -45,7 +61,19 @@
 		<p id="font">J'ai effectué un stage de découverte de l'entreprise en classe de 3ème a la Caisse des 
 			Allocations Familiales de Melun. J'ai pu y visiter les différents pôles dont le pôle informatique
 			qui m'as beaucoup plu.</p>
-		
+		<p id="font"><strong><u>Diplômes:</u></strong></p>
+		<p id="font">-Baccalauréat Général <br> <i>Spécialité Mathématiques et Physique Chimie, Mention Européenne</i></p>
+	</div>
+
+	<div class="application" id="referentiel">
+		<canvas id="header" onmousedown="dragElement(this)"></canvas>
+		<canvas id="exit" onclick="Onclick_exit(this)"></canvas>
+		<h3 style="text-align: center; font-family: 'Times New Roman', Times, serif;"><u>Référentiel</u></h3>
+		<p id="font">Le Brevet de Technicien Supérieur aux Services Informatiques aux Organisations (BTS SIO), s'adresse à ceux qui souhaitent se former en deux ans aux métiers d'administrateur réseau ou de développeur. Pour par la suite intégré directement le marché du travail ou continuer des études, dans le domaine de l'informatique.</p>
+		<p id="font">Il propose 2 spécialités:</p>
+		<p id="font"><u>Option SISR:</u><br>L’option Solutions d’infrastructure, systèmes et réseaux forme des professionnels des réseaux et équipements informatiques (installation, maintenance, sécurité). En sortant d’un BTS SIO SISR, vous serez capables de gérer et d’administrer le réseau d’une société et d’assurer sa sécurité et sa maintenance.</p>
+		<p id="font"><u>Option SLAM:</u><br>L’option Solutions logicielles et applications métiers forme des spécialistes des logiciels (rédaction d’un cahier des charges, formulation des besoins et spécifications, développement, intégration au sein de la société).</p>
+		<p id="font">Le référentiel complet est disponible ici: <a href="Ressources/Pdf/Référentiel BTS SIO.pdf" target="_blank">Référentiel BTS SIO</a></p>
 	</div>
 
 
