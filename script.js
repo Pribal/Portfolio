@@ -117,8 +117,7 @@ taskbar = document.getElementById("taskbar");
 function dragElement(elmnt) {
   var elmntapp = document.getElementById(elmnt.parentNode.id);
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  //elmnt.onmousedown = dragMouseDown;
-  elmnt.addEventListener("mousedown", dragMouseDown);
+  elmnt.onmousedown = dragMouseDown;
 
   function dragMouseDown(e) {
     e = e || window.event;

@@ -41,7 +41,7 @@
 	position: absolute;
 	bottom: 0;
 	left: 0.1fr;
-	background-image: url(Ressources/Images/swap_bg.png);
+	background-image: url(Ressources/Icon/swap_bg.png);
 	background-size: 20px 40px;
 	background-color: black;
 	background-repeat: no-repeat;
@@ -60,7 +60,7 @@
 	padding: 0;
 	margin: 0;
 	margin-left: 93.35%;
-	background-image: url(Ressources/Images/cross.png);
+	background-image: url(Ressources/Icon/cross.png);
 	background-size: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -95,6 +95,10 @@
 }
 
 #referentiel{
+	display: none;
+}
+
+#contact{
 	display: none;
 }
 
