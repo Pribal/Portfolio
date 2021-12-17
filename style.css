@@ -17,7 +17,7 @@
 	position:absolute;
 	display: grid;
 	grid-template-rows: repeat(6, 90px);
-	grid-template-columns: repeat(12, 90px);
+	grid-template-columns: repeat(16, 90px);
 }
 
 
@@ -109,8 +109,8 @@
 }
 
 .presentation{
-	grid-row: 1 / 2;
-	grid-column: 11 / 12;
+	grid-row: 3 / 4;
+	grid-column: 8 / 9;
 }
 
 .presentation:hover{
@@ -118,8 +118,8 @@
 }
 
 .referentiel{
-	grid-row: 1 / 2;
-	grid-column: 1 / 2;
+	grid-row: 7 / 8;
+	grid-column: 16 / 17;
 }
 
 .referentiel:hover{
@@ -127,7 +127,7 @@
 }
 
 .cv{
-	grid-row: 2 / 3;
+	grid-row: 7 / 8;
 	grid-column: 1 / 2;
 }
 
@@ -136,8 +136,8 @@
 }
 
 .contact{
-	grid-row: 3 / 4;
-	grid-column: 1 / 2;
+	grid-row: 7 / 8;
+	grid-column: 8 / 9;
 }
 
 .contact:hover{
@@ -145,8 +145,8 @@
 }
 
 .motivation{
-	grid-row: 3 / 4;
-	grid-column: 2 / 3;
+	grid-row: 1 / 2;
+	grid-column: 16 / 17;
 }
 
 .motivation:hover{
@@ -154,8 +154,8 @@
 }
 
 .competence{
-	grid-row: 3 / 4;
-	grid-column: 3 / 4;
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
 }
 
 .competence:hover{

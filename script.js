@@ -1,8 +1,6 @@
 function Screen_size(){
 	W = window.innerWidth;
 	H =  window.innerHeight;
-	console.log("Width:" + W + "px");
-	console.log("Height:" + H + "px");
 }
 Screen_size();
 
@@ -102,7 +100,6 @@ change_background();
 
 function Open_window(opn){
 	var opnC = opn.className;
-	console.log(opnC);
 	var op = document.getElementById(opnC);
 	if (op.style.display == "block"){
 		op.style.display = "none";
