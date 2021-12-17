@@ -63,7 +63,7 @@ app = document.getElementsByClassName("application");
 function darkmode(){
 	for (var k = 0; k < app.length; k++) {
 		app[k].style.backgroundColor = "#474747";
-		text = app[k].querySelectorAll("p, h3, a");
+		text = app[k].querySelectorAll("p, h3, a, h4");
 		for (var t = 0; t < text.length; t++){
 			text[t].style.color = "#ffffff";
 		}
@@ -73,7 +73,7 @@ function darkmode(){
 function lightmode(){
 	for (var k = 0; k < app.length; k++) {
 		app[k].style.backgroundColor = "#ffffff";
-		text = app[k].querySelectorAll("p, h3, a");
+		text = app[k].querySelectorAll("p, h3, a, h4");
 		for (var t = 0; t < text.length; t++){
 			text[t].style.color = "#000000";
 		}
