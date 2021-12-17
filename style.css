@@ -76,6 +76,7 @@
 
 .application{
 	position: absolute;
+	border-radius: 5px;
 	height: 500px;
 	width: 450px;
 	background-color: white;
@@ -100,7 +101,11 @@
 #contact{
 	display: none;
 	height: 200px;
-	width: 180px;
+	width: 230px;
+}
+
+#competence{
+	display: none;
 }
 
 .presentation{
@@ -139,3 +144,20 @@
 	background-color: rgba(255,255,255,.5)
 }
 
+.motivation{
+	grid-row: 3 / 4;
+	grid-column: 2 / 3;
+}
+
+.motivation:hover{
+	background-color: rgba(255,255,255,.5)
+}
+
+.competence{
+	grid-row: 3 / 4;
+	grid-column: 3 / 4;
+}
+
+.competence:hover{
+	background-color: rgba(255,255,255,.5)
+}
