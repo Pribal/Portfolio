@@ -33,6 +33,9 @@ function Time() {
 	if (day < 10){
 		day = "0"+day;
 	}
+	if (month < 10){
+		month = "0"+month;
+	}
 	document.getElementById("date").innerHTML = day + "/" + month + "/" + year;
 }
 
